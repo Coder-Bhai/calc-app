@@ -9,9 +9,10 @@ class ResultDisplay extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double h = MediaQuery.of(context).size.height;
     return Container(
       width: double.infinity,
-      height: 180,
+      height: h/4,
       margin: EdgeInsets.all(20.0),
       decoration: BoxDecoration(
           color: Colors.white,
@@ -25,7 +26,7 @@ class ResultDisplay extends StatelessWidget {
                 color: Colors.white, blurRadius: 30.0, offset: Offset(4, 4)),
           ]),
       child: Container(
-        padding: EdgeInsets.only(right: 24, bottom: 24),
+        padding: EdgeInsets.only(right: 24, bottom: h/7-80),
         alignment: Alignment.bottomRight,
         child: Text(
           text,
